@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <!-- Bootstrap -->
+    <link href="../template/vendors/bootstrap/dist/css/bootstrap.min.css" rel="stylesheet">
+    <!-- Font Awesome -->
+    <link href="../template/vendors/font-awesome/css/font-awesome.min.css" rel="stylesheet">
+    <!-- NProgress -->
+    <link href="../template/vendors/nprogress/nprogress.css" rel="stylesheet">
+    <!-- Animate.css -->
+    <link href="../template/vendors/animate.css/animate.min.css" rel="stylesheet">
+</head>
+
+<body class="nav-md">
+    <div class="container body">
+        <div class="main_container">
+            <div class="col-md-12 col-sm-12 col-xs-12">
+                <div class="panel panel-primary">
+                    <div class="panel-body">
+                        <h4 class="m-b-30 m-t-0">Nuevo Usuario</h4>
+                        <fieldset>
+                            <legend>Datos del Usuario</legend>
+                            <div id="divAlertMessage" style="display:none"></div>
+                            <div class="form-group">
+                                <label class="control-label col-md-2">Username</label>
+                                <div class="col-md-10">
+                                    <input id="txtUsername" type="text" class="form-control">
+                                </div>
+                            </div>
+
+                            <div class="form-group">
+                                <label class="control-label col-md-2">Password</label>
+                                <div class="col-md-10">
+                                    <input id="txtPassword" type="text" class="form-control">
+                                </div>
+                            </div>
+
+                            <div class="form-group">
+                                <label class="control-label col-md-2">Nombre</label>
+                                <div class="col-md-10">
+                                    <input id="txtNombre" type="text" class="form-control">
+                                </div>
+                            </div>
+
+                            <div class="form-group">
+                                <label class="control-label col-md-2">Rol</label>
+                                <div class="col-md-10">
+                                    <select id="cmbRol" class="form-control">
+                                        <option value="0">Seleccione</option>
+                                        <option value="1">Desarrollador Senior</option>
+                                        <option value="2">Desarrollador Advance</option>
+                                        <option value="3">Desarrollador Junior</option>                                       
+                                    </select>
+                                </div>
+                            </div>
+                        </fieldset>
+
+                        <br />
+
+                        <div class="row">
+                            <div class="form-group col-sm-12">
+                                <div class="col-md-12">
+                                    <input type="button" id="btnGuardar" value="Guardar" class="btn btn-primary" /> &nbsp;
+                                    <a href="" class="btn btn-default" role="button" aria-pressed="true">Volver</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- Insert this line above script imports  -->
+    <script>
+        require('../controllers/usuarioCreate.js')
+    </script>
+    <script>
+        if (typeof module === 'object') {
+            window.module = module;
+            module = undefined;
+        }
+    </script>
+    <!-- jQuery -->
+    <script type="text/javascript" src="../template/vendors/jquery/dist/jquery.min.js"
+        onload="window.$ = window.jQuery;">
+    </script>
+    <script src="../template/vendors/bootstrap/dist/js/bootstrap.min.js"></script>
+    <script src="../template/vendors/core/core.js"></script>
+    <script>
+        if (window.module) module = window.module;
+    </script>
+</body>
+
+</html>
