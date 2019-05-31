@@ -13,8 +13,6 @@ if (process.env.NODE_ENV !== 'production') {
 let mainWindow
 let WinUsuario
 let UsuarioCreate
-//let username = process.env. || process.env.user;
-//console.log(username)
 
 function createWindows() {
     //ventana Principal   
@@ -98,7 +96,7 @@ function userIndex() {
         },
         parent: mainWindow,
         width: 1000,
-        height: 300,
+        height: 600,
         title: 'Administración Usuario'
     })
 
@@ -121,6 +119,11 @@ ipcMain.on('userCreate', (event, arg) => {
     }
 })
 
+ipcMain.on('createUser', (event, arg) => {
+    if (arg == 'ok') {        
+        UsuarioCreate == null      
+    }
+})
 //creacion ventana Administarcion de Usuarios URL"Create"
 function userCreate() {
     UsuarioCreate = new BrowserWindow({
